@@ -2,16 +2,18 @@ from nn import *
 
 
 def train(n, episodes=20, learning_rate=-0.1):
-    '''
+    """
     n: the neural network
     episodes: the times of the training
     learning_rate: the step size of each gradient descent step
-    '''
+    """
     for k in range(episodes):
 
         # forward pass
         ypred = [n(x) for x in xs]
-        loss = sum((yout - ygt) ** 2 for ygt, yout in zip(ys, ypred))  # The loss function is simply the MSE loss.
+        loss = sum(
+            (yout - ygt) ** 2 for ygt, yout in zip(ys, ypred)
+        )  # The loss function is simply the MSE loss.
 
         # backward pass
         # n.zero_grad()
@@ -25,7 +27,8 @@ def train(n, episodes=20, learning_rate=-0.1):
 
         print(k, loss.data)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     xs = [
         [2.0, 3.0, -1.0],
         [3.0, -1.0, 0.5],
