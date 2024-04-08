@@ -1,2 +1,6 @@
 __pycache__
 idea
+./VAE/images
+./VAE/data
+./VAE/checkpoints
+./VAE/assets

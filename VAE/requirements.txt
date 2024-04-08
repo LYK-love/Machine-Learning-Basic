@@ -1,0 +1,9 @@
+torch
+torchvision
+matplotlib
+numpy
+scipy
+six
+umap-learn
+importlib-metadata
+importlib
